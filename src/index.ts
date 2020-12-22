@@ -217,13 +217,16 @@ export const dockerCommand = async (
     );
 
     if (options.echo) {
-      childProcess.stdout.on("data", (chunk) => {
-        process.stdout.write(chunk.toString());
-      });
-
-      childProcess.stderr.on("data", (chunk) => {
-        process.stderr.write(chunk.toString());
-      });
+        if (childProcess.stdout != null) {
+            childProcess.stdout.on("data", (chunk) => {
+                process.stdout.write(chunk.toString());
+            });
+        }
+        if (childProcess.stderr != null) {
+            childProcess.stderr.on("data", (chunk) => {
+                process.stderr.write(chunk.toString());
+            });
+        }
     }
   });
 

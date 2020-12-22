@@ -14,7 +14,8 @@
     "no-var-requires": false,
     "only-arrow-functions": false,
     "variable-name": [ true, "ban-keywords", "allow-leading-underscore" ],
-    "comment-format": [ false, "check-space", "check-uppercase" ]
+    "comment-format": [ false, "check-space", "check-uppercase" ],
+    "space-before-function-paren": false
   },
   "rulesDirectory": []
 }
